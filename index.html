@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedimento de Atualização do Certificado Digital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #000000;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        h1, h2 {
+            color: #ff4d00; /* Laranja Principal */
+            border-bottom: 2px solid #ff4d00; /* Laranja Principal */
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .slide {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .comando {
+            background-color: #e7e7e7;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .ponto-chave {
+            background-color: #FFF5E1; /* Laranja bem claro (fundo) */
+            border-left: 4px solid #ff4d00; /* Laranja para destaque */
+            padding: 10px;
+            margin-top: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .emoji {
+            font-size: 1.2em;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .link-estilizado {
+          text-decoration: none; /* remove o sublinhado */
+          color: #007BFF; /* cor azul bonitinha */
+        font-weight: bold; /* deixa em negrito */
+        transition: color 0.3s; /* efeito suave ao passar o mouse */
+        }   
+
+        .link-estilizado:hover {
+         color: #0056b3; /* muda a cor quando passa o mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Procedimento: Atualização do Certificado Digital no Sisloc</h1>
+    <p><strong>Documento de referência para cadastro, atualização e validação de certificados.</strong></p>
+
+    <div class="slide">
+        <h2><span class="emoji">🎯</span> Objetivo</h2>
+        <p>Orientar o processo de <strong>cadastro ou renovação</strong> de um certificado digital no Sisloc, garantindo que todas as séries de notas fiscais vinculadas sejam <strong>atualizadas automaticamente</strong>.</p>
+    </div>
+
+    <div class="slide" id="Passo1">
+        <h2><span class="emoji">1️⃣</span> Passo 1: Cadastro ou Atualização do Certificado</h2>
+        <p><strong>Acesse a função:</strong> No campo de pesquisa do Sisloc, digite:</p>
+        <p><span class="comando">CADASTRO\CERTIFICADO</span></p>
+
+        <h3> Para um NOVO certificado:</h3>
+        <ul>
+            <li>Clique em <strong>Adicionar [+]</strong>.</li>
+            <li><strong>Descrição:</strong> Dê um nome claro (ex: <code>Certificado NOME DA EMPRESA</code>).</li>
+            <li><strong>Arquivo:</strong> Clique em <strong>"Selecionar Certificado"</strong> e selecione o arquivo <code>.pfx</code> atualizado.</li>
+            <li><strong>Diretório:</strong> Clique no botão de reticências (...) para selecionar o caminho de rede onde o certificado <code>.pfx</code> foi salvo.</li>
+            <li><strong>Senha:</strong> Informe a senha do certificado.</li>
+            <li>Clique em <strong>Salvar</strong>.</li>
+            
+        <div class="ponto-chave">
+            <strong>Observação:</strong> O certificado digital no formato .PFX deva obrigatoriamente possuir 9KB de tamanho
+        </div>
+                <h3>CADASTRO\CERTIFICADO</h3>
+             <img src="Cadastro-certificado.jpg" alt="Tela da Série de Nota Fiscal, destacando o campo Certificado Digital.">
+              <h3>Selecionar Certificado</h3>
+             <img src="Selecionar Certificado.jpg" alt="Selecionar Certificado">
+
+       </ul>
+
+        <h3> Para ATUALIZAR um certificado existente:</h3>
+         <ul>
+            <li>Dê um duplo clique no certificado a ser renovado.</li>
+            <li><strong>Arquivo:</strong> Clique em <strong>"Selecionar Certificado"</strong> e escolha o <strong>NOVO</strong> arquivo <code>.pfx</code>.</li>
+            <li><strong>Diretório:</strong> Clique no botão de reticências (...) para selecionar o caminho de rede onde o novo certificado <code>.pfx</code> foi salvo.</li>
+            <li><strong>Senha:</strong> Informe a <strong>NOVA</strong> senha.</li>
+            <li>Clique em <strong>Salvar</strong>.</li>
+        </ul>
+        <div class="ponto-chave">
+            <strong>Ponto Chave:</strong> Ao salvar, o sistema atualiza automaticamente todas as séries fiscais que utilizar este cadastro de certificado.
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2><span class="emoji">2️⃣</span> Passo 2: Vincular o Certificado à Série Fiscal</h2>
+        <p><strong>Acesse a função:</strong> No campo de pesquisa do Sisloc, digite:</p>
+        <p><span class="comando">NOTA FISCAL\SÉRIE DE NOTA FISCAL</span></p>
+        <ul>
+            <li>Selecione a série que realiza a comunicação com a SEFAZ.</li>
+            <li>No campo <strong>"Certificado Digital"</strong>, selecione o certificado cadastrado no Passo 1.</li>
+            <li>Clique em <strong>Salvar</strong>.</li>
+            
+            <a href="#Passo1" class="link-estilizado">Passo 1º</a>
+            
+            <img src="Série NF-e - Selecionar certificado.jpg" alt="NOTA FISCAL\SÉRIE DE NOTA FISCAL">
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2><span class="emoji">3️⃣</span> Passo 3: Teste e Validação</h2>
+        <p>A etapa final é garantir que tudo está funcionando.</p>
+        <p>Para testar, acesse o caminho: "Nota Fiscal\NF Eletrônica de mercadoria\Consulta Status WebService". Em seguida, selecione a série que deseja validar e clique no botão:</p>
+        <p><span class="comando">[✓] Comunicar Certificado</span></p>
+        <ul>
+            <li><strong>✅ SUCESSO:</strong> O sistema exibirá uma mensagem de confirmação. O certificado está pronto para uso!</li>
+            <li><strong>❌ ERRO:</strong> Se ocorrer falha, verifique os seguintes pontos: se a <strong>senha</strong> está correta, se o <strong>certificado não está vencido</strong> e se o <strong>diretório</strong> do certificado está correto.</li>
+        </ul>
+        <h3>Teste e Validação</h3>
+         <img src="TESTE WEBService.jpg" alt=" Teste e Validação ">
+
+    </div>
+
+    <hr>
+    <p style="text-align:center; font-size: 0.9em; color: #666;">Fim do Procedimento</p>
+
+</body>
+</html>
+```
