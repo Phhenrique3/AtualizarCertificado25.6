@@ -132,7 +132,7 @@
 
 <body>
 
-    <h1>Procedimento: Atualização do Certificado Digital no Sisloc</h1>
+    <h1>Procedimento: Atualização do Certificado Digital no servidor do Sisloc </h1>
     <p><strong>Documento de referência para cadastro, atualização e validação de certificados.</strong></p>
 
     <div class="slide">
@@ -142,10 +142,57 @@
     </div>
 
     <div class="slide" id="Passo1">
-        <h2><span class="emoji">1️⃣</span> Passo 1: Cadastro ou Atualização do Certificado</h2>
+    <h2><span class="emoji"></span> Passo 1º: Instalação do Certificado Digital A1 no Windows</h2>
+    <p>Antes de cadastrar ou atualizar no Sisloc, é necessário instalar o certificado no sistema operacional Windows.</p>
+
+    <h3>Procedimento:</h3>
+    <ul>
+        <li><strong>Localizar o certificado:</strong> Encontre a pasta onde o certificado foi salvo.  
+            <div class="ponto-chave">O arquivo deve obrigatoriamente estar no formato <code>.pfx</code>.</div>
+        </li>
+        <li><strong>Abrir o arquivo:</strong> Dê um duplo clique sobre o arquivo para iniciar o <em>Assistente para Importação de Certificados</em>.</li>
+        <li><strong>Seleção do local:</strong> Na tela inicial, marque:
+            <ul>
+                <li><strong>[x]</strong> Usuário local</li>
+                <li><strong>[ ]</strong> Máquina local</li>
+            </ul>
+            Em seguida, clique em <strong>Avançar</strong>.
+        </li>
+        <li><strong>Confirmação do caminho:</strong> O assistente exibirá o caminho do arquivo. Apenas clique em <strong>Avançar</strong>.</li>
+        <li><strong>Inserir a senha:</strong> Digite a senha fornecida pela autoridade certificadora e marque:
+            <ul>
+                <li><strong>[x]</strong> Proteger chave privada usando a segurança virtualizada (não exportável)</li>
+            </ul>
+            Clique em <strong>Avançar</strong>.
+        </li>
+        <li><strong>Repositório:</strong> Mantenha marcada a opção:
+            <ul>
+                <li><strong>[x]</strong> Selecionar automaticamente o repositório de certificados conforme o tipo de certificado</li>
+            </ul>
+            Clique em <strong>Avançar</strong>.
+        </li>
+        <li><strong>Conclusão:</strong> Clique em <strong>Concluir</strong> para finalizar a instalação.</li>
+    </ul>
+
+    <div class="ponto-chave">
+        <strong>Mensagem de confirmação:</strong> O sistema exibirá <em>"A importação obteve êxito"</em>.  
+        Isso significa que o certificado foi instalado com sucesso no Windows.
+    </div>
+        <img src="Certificado_1.jpg" alt="Instalação certificado windows Passo 1">
+        <img src="/certificado_2.jpg" alt="Instalação certificado windows Passo 2">
+        <img src="Certificado_3.jpg" alt="Instalação certificado windows Passo 3">
+        <img src="Certificado_4.jpg" alt="Instalação certificado windows Passo 4 ">
+        <img src="certificado_5.jpg" alt="Instalação certificado windows Passo 5 ">
+</div>
+
+    <div class="slide" id="Passo2">
+        <h2><span class="emoji"></span> Passo 2º : Cadastro ou Atualização do Certificado</h2>
         <p><strong>Acesse a função:</strong> No campo de pesquisa do Sisloc, digite:</p>
         <p><span class="comando">CADASTRO\CERTIFICADO</span></p>
 
+        <p>
+            <a class="link" href="https://atendimento.sisloc.com.br/hc/pt-br/articles/23975592899739-Certificado-Digital">Vídeo demonstrativo do processo de configuração/apontamento do certificado digital no Sisloc.</a>
+        </p>
         <h3> Para um NOVO certificado:</h3>
         <ul>
             <li>Clique em <strong>Adicionar [+]</strong>.</li>
@@ -187,7 +234,7 @@
     </div>
 
     <div class="slide">
-        <h2><span class="emoji">2️⃣</span> Passo 2: Vincular o Certificado à Série Fiscal</h2>
+        <h2><span class="emoji"></span> Passo 3º: Vincular o Certificado à Série Fiscal</h2>
         <p><strong>Acesse a função:</strong> No campo de pesquisa do Sisloc, digite:</p>
         <p><span class="comando">NOTA FISCAL\SÉRIE DE NOTA FISCAL</span></p>
         <ul>
@@ -195,12 +242,12 @@
             <li>No campo <strong>"Certificado Digital"</strong>, selecione o certificado cadastrado no Passo 1.</li>
             <li>Clique em <strong>Salvar</strong>.</li>
         </ul>
-        <a href="#Passo1" class="link-estilizado">Voltar ao Passo 1</a>
+        <a href="#Passo2" class="link-estilizado">Voltar ao Passo 2º</a>
         <img src="Série NF-e - Selecionar certificado.jpg" alt="NOTA FISCAL\SÉRIE DE NOTA FISCAL">
     </div>
 
     <div class="slide">
-        <h2><span class="emoji">3️⃣</span> Passo 3: Teste e Validação</h2>
+        <h2><span class="emoji"></span> Passo 4º : Teste e Validação</h2>
         <p>A etapa final é garantir que tudo está funcionando.</p>
         <p>Para testar, acesse o caminho: "Nota Fiscal\NF Eletrônica de mercadoria\Consulta Status WebService". Em
             seguida, selecione a série que deseja validar e clique no botão:</p>
